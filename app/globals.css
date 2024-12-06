@@ -19,7 +19,7 @@
 
   body {
     font-family: "Pretendard";
-    @apply w-full h-full text-black bg-white overflow-x-hidden overflow-y-scroll tracking-[-0.04em];
+    @apply w-full h-full text-black bg-white overflow-x-hidden overflow-y-scroll tracking-[-0.02em];
   }
 
   svg {
@@ -49,7 +49,7 @@
           @apply flex items-center flex-col md:flex-row gap-6 md:gap-[40px] bg-[#F2F4F6] rounded-[20px] p-4 pt-[30px] md:pt-[40px] md:pb-[30px] md:px-[40px];
 
           dt {
-            @apply md:w-[112px] text-[20px] md:text-[24px] text-center font-bold leading-[26px] md:leading-[31.2px];
+            @apply md:w-[112.5px] text-[20px] md:text-[24px] text-center font-bold leading-[26px] md:leading-[31.2px];
           }
 
           dd {
@@ -114,7 +114,7 @@
               @apply text-[12px] sm:text-[16px] text-white leading-[16.8px] leading-[22.4px] bg-[#333D4B] border-[1px] border-solid border-black py-2 sm:py-2.5;
             }
             td {
-              @apply text-[12px] sm:text-[16px] leading-[15.12px] leading-[22.4px] bg-white  border-[1px] border-solid border-black  py-[5px] sm:py-2.5 px-2 sm:px-3;
+              @apply text-[12px] sm:text-[16px] leading-[15.12px] leading-[22.4px] bg-white  border-[1px] border-solid border-black  py-[5px] sm:py-[9.25px] px-2 sm:px-3 pl-[13px] sm:pl-[13px] tracking-[-0.3px];
 
               &:last-child {
                 @apply text-center text-[#E55353];
@@ -127,7 +127,7 @@
           }
 
           dl {
-            @apply text-[16px] sm:text-[20px] leading-[20.8px] sm:leading-[26px] bg-white rounded-[20px] py-4 px-5;
+            @apply text-[16px] sm:text-[20px] leading-[20.8px] sm:leading-[26px] bg-white rounded-[20px] py-4 pl-[21px] pr-5;
 
             dt {
               @apply font-bold mb-2;
@@ -208,12 +208,19 @@
           @apply flex flex-col sm:grid sm:grid-cols-3 gap-5;
 
           & > li {
-            @apply bg-[#F2F4F6] rounded-[20px] py-6 sm:py-10 px-4 sm:px-5;
+            @apply bg-[#F2F4F6] rounded-[20px] py-6 sm:py-10 px-4 sm:px-[21.5px];
 
             dl {
               dt {
-                @apply text-[16px] sm:text-[24px] font-bold leading-[22.4px] sm:leading-[31.2px] mb-4 sm:mb-10;
+                @apply text-[16px] sm:text-[24px] font-bold leading-[22.4px] sm:leading-[31.2px] mb-4;
               }
+              dt.mb6 {
+                @apply sm:mb-6;
+              }
+              dt.mb10 {
+                @apply sm:mb-10;
+              }
+
               dd {
                 @apply text-[16px] sm:text-[20px] leading-[20.8px] sm:leading-[30px];
               }
