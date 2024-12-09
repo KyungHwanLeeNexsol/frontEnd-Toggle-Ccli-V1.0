@@ -66,36 +66,37 @@ function MainPage() {
             <Link
               href="https://ccali.zeropay-mall.insboon.com/"
               target="_blank"
-              className="flex items-center gap-4 h-[54px] bg-primary rounded-[16px] py-4 pl-6 pr-8 hidden sm:flex"
+              className="flex items-center gap-2 lg:gap-4 lg:h-[54px] bg-primary rounded-[16px] py-1 lg:py-4 pl-4 lg:pl-6 pr-4 lg:pr-8"
               style={{
-                boxShadow:
-                  "0px 0px 8px 0px #00000014, 0px 8px 16px 0px #00000014,  0px 16px 20px 0px #0000001F",
+                boxShadow: lg
+                  ? "0px 0px 8px 0px #00000014, 0px 8px 16px 0px #00000014,  0px 16px 20px 0px #0000001F"
+                  : "0px 0px 4px 0px #00000014, 0px 4px 8px 0px #00000014,  0px 8px 10px 0px #0000001F",
               }}
             >
               <Image
                 src="./images/icon_phone.svg"
                 alt="우리 회사에 도입하기"
-                width={20}
-                height={20}
+                width={lg ? 20 : 16}
+                height={lg ? 20 : 16}
               />
-              <p className="text-white text-[16px] font-bold leading-[22.4px]">
+              <p className="text-white text-[14px] lg:text-[16px] font-bold leading-[22.4px]">
                 우리 회사에 도입하기
               </p>
             </Link>
 
-            <Image
+            {/* <Image
               src="./images/icon_menu.svg"
               alt="메뉴"
               width={24}
               height={24}
               className="block sm:hidden"
-            />
+            /> */}
           </div>
         </header>
 
         <div
           id="mainVisual"
-          className="inner px-[15px] pb-[60px] sm:pt-[60px] sm:px-[60px]"
+          className="inner px-[15px] pb-[60px] sm:pb-[0px] sm:pt-[60px] sm:px-[60px]"
         >
           <div
             className="rounded-[20px] px-4 pt-[40px] pb-[195px] lg:py-[80px] lg:px-[60px] mb-6 sm:mb-10"
@@ -107,7 +108,7 @@ function MainPage() {
               backgroundSize: sm ? "auto 390px" : "343px auto",
             }}
           >
-            <p className="text-white text-[56px] leading-[78.4px] font-extrabold hidden lg:block">
+            <p className="text-white text-[56px] leading-[78px] font-extrabold hidden lg:block">
               예상치 못한 중대재해의 위험,
               <br />
               여러분의 기업은 대비하고 있습니까?
@@ -124,7 +125,7 @@ function MainPage() {
           </div>
 
           <div className="text-center">
-            <p className="leading-[21px] sm:text-[24px] sm:font-bold sm:leading-[30px] mb-6 sm:mb-4">
+            <p className="leading-[21px] sm:text-[24px] sm:font-bold sm:leading-[31px] mb-6 sm:mb-4">
               지금 중대재해보험으로 대비하지 않으면,
               <br />
               당신의 기업과 경영자가 고소·고발 대상이 될 수 있습니다!
@@ -135,7 +136,7 @@ function MainPage() {
             </p>
             <button
               type="button"
-              className="text-primary font-bold leading-[22px] py-[15px] px-[27px] rounded-[16px] border-[2px] border-solid border-primary"
+              className="text-primary font-bold leading-[22px] py-[14px] px-[27px] rounded-[16px] border-[2px] border-solid border-primary"
               onClick={() => goToSection4()}
             >
               중대재해보험에 대해 자세히 알아보세요
@@ -257,7 +258,7 @@ function MainPage() {
                   </dl>
                 </div>
 
-                <div className="w-full sm:max-w-max mx-auto">
+                <div className="w-full sm:max-w-max sm:mx-auto">
                   <Image
                     src="./images/img_article1.svg"
                     alt="열사병 · 화재 사고 기사 이미지"
@@ -340,7 +341,7 @@ function MainPage() {
 
                 <table>
                   <colgroup>
-                    <col style={{ width: "74%" }} />
+                    <col style={{ width: sm ? "75%" : "74%" }} />
                   </colgroup>
                   <thead>
                     <tr>
@@ -451,6 +452,7 @@ function MainPage() {
                     alt="법적 리스크 방어"
                     width={md ? 120 : 100}
                     height={md ? 120 : 100}
+                    className="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
                   />
                   <dl>
                     <dt>법적 리스크 방어</dt>
@@ -469,6 +471,7 @@ function MainPage() {
                     alt="재정적 손실 최소화"
                     width={md ? 120 : 100}
                     height={md ? 120 : 100}
+                    className="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
                   />
                   <dl>
                     <dt>재정적 손실 최소화</dt>
@@ -487,6 +490,7 @@ function MainPage() {
                     alt="기업 신뢰도 유지"
                     width={md ? 120 : 100}
                     height={md ? 120 : 100}
+                    className="w-[100px] h-[100px] md:w-[120px] md:h-[120px]"
                   />
                   <dl>
                     <dt>기업 신뢰도 유지</dt>
@@ -501,7 +505,7 @@ function MainPage() {
               </div>
 
               <div className="md:p-10 md:pt-5 md:mx-[-3px]">
-                <div className="bg-primary md:rounded-[20px] px-4 pt-6 pb-[13px] md:pt-[30px] md:px-[40px] md:py-[60px]">
+                <div className="bg-primary md:rounded-[20px] px-4 pt-6 md:pt-[59.2px] pb-[13px] md:pt-[30px] md:px-[40px] md:py-[60px]">
                   <p className="max-w-max text-[20px] md:text-[24px] text-[#2250C3] font-bold leading-[26px] md:leading-[31.2px] bg-white mx-auto mb-8 md:mb-[60px] py-1.5 px-4 rounded-[12px] tracking-[-0.35px]">
                     간편한 보험 가입 서비스
                   </p>

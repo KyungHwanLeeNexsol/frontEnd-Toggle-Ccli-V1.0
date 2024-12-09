@@ -65,7 +65,7 @@
                 }
 
                 p {
-                  @apply break-keep;
+                  @apply leading-[21px] sm:leading-[26px] break-keep;
                 }
               }
             }
@@ -115,10 +115,10 @@
           table {
             @apply w-full;
             th {
-              @apply text-[12px] sm:text-[16px] text-white leading-[17px] sm:leading-[22.4px] bg-[#333D4B] border-[1px] border-solid border-black py-[7px] sm:py-[9px];
+              @apply text-[12px] sm:text-[16px] text-white leading-[17px] sm:leading-[22px] bg-[#333D4B] border-[1px] border-solid border-black py-[7px] sm:py-[9.5px];
             }
             td {
-              @apply text-[12px] sm:text-[16px] leading-[15px] sm:leading-[22.4px] bg-white  border-[1px] border-solid border-black  py-[5px] sm:py-[9.25px] px-2 sm:px-3 sm:pl-[13px];
+              @apply text-[12px] sm:text-[16px] leading-[15px] sm:leading-[22px] bg-white  border-[1px] border-solid border-black  py-[5px] sm:py-[9.5px] px-2 sm:px-3 sm:pl-[13px];
 
               &:last-child {
                 @apply text-center text-[#E55353] px-0;
@@ -162,7 +162,7 @@
 
           dl {
             dt {
-              @apply text-[16px] md:text-[24px] font-bold leading-[22.4px] md:leading-[31.2px] mb-1 md:mb-4 md:h-[31px];
+              @apply text-[16px] md:text-[24px] font-bold leading-[22px] md:leading-[31px] mb-1 md:mb-4;
             }
             dd {
               @apply text-[16px] md:text-[20px] leading-[21px] md:leading-[30px];
