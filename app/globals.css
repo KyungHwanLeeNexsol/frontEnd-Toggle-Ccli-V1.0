@@ -8,7 +8,7 @@
 @layer base {
   /* 기본 테마 */
   * {
-    /* @apply tracking-[-0.02em]; */
+    @apply tracking-[-0.02em];
   }
 
   html {
@@ -41,7 +41,7 @@
       @apply py-[60px] px-4 sm:pt-[120px] sm:px-[60px] sm:pb-[80px];
 
       h2 {
-        @apply text-[24px] sm:text-[32px] font-bold leading-[31.2px] sm:leading-[41.6px] mb-6 sm:mb-[64px];
+        @apply text-[24px] sm:text-[32px] font-bold leading-[31px] sm:leading-[42px] mb-6 sm:mb-[64px];
       }
 
       &.section1 {
@@ -56,12 +56,16 @@
             @apply w-full flex-1;
 
             ul {
-              @apply flex gap-5;
+              @apply flex gap-3 sm:gap-5;
               li {
-                @apply flex-1 flex flex-col md:flex-row gap-2 text-[16px] sm:text-[20px] leading-[20.8px] sm:leading-[26px] bg-white rounded-[20px] py-3 sm:py-4 px-5;
+                @apply flex-1 flex flex-col md:flex-row gap-1 sm:gap-2 text-[16px] sm:text-[20px] leading-[20.8px] sm:leading-[26px] bg-white rounded-[20px] py-3 sm:py-4 px-4 sm:px-5;
 
                 span {
-                  @apply font-bold;
+                  @apply text-[14px] leading-[18px] sm:leading-[26px] sm:text-[20px] font-bold;
+                }
+
+                p {
+                  @apply break-keep;
                 }
               }
             }
@@ -71,17 +75,17 @@
 
       &.section2 {
         div.box-wrap {
-          @apply flex-1 bg-[#505866] rounded-[20px] p-4 sm:p-[40px] pt-[30px] sm:pt-[60px];
+          @apply flex-1 bg-[#505866] rounded-[20px] p-4 sm:h-[659px] sm:p-[40px] pt-[30px] sm:pt-[60px];
 
           h3 {
-            @apply text-[20px] sm:text-[24px] text-white text-center font-bold leading-[26px] sm:leading-[31.2px] mb-6 sm:mb-[48px];
+            @apply text-[20px] sm:text-[24px] text-white text-center font-bold leading-[26px] sm:leading-[31.2px] mb-6 sm:mb-[48px] sm:h-[31px];
           }
 
           dl {
             @apply flex sm:items-center flex-col sm:flex-row gap-2 sm:gap-4;
 
             dt {
-              @apply flex items-center gap-2 sm:gap-4 text-white leading-[20.8px];
+              @apply flex items-center gap-2 sm:gap-4 text-white leading-[21px];
 
               &:before {
                 content: "";
@@ -93,7 +97,7 @@
               @apply flex gap-4 justify-end sm:justify-start;
 
               span {
-                @apply font-bold leading-[20.8px] bg-white rounded-[4px] py-1 px-2;
+                @apply font-bold leading-[21px] bg-white rounded-[4px] py-1 px-2 sm:h-[29px];
               }
             }
           }
@@ -105,19 +109,19 @@
           @apply flex-1 bg-[#F2F4F6] rounded-[20px] p-4 pt-[30px] sm:p-10 sm:pb-5;
 
           h3 {
-            @apply text-[20px] sm:text-[24px] text-center font-bold leading-[26px] sm:leading-[31.2px] mb-6 sm:mb-10;
+            @apply text-[20px] sm:text-[24px] text-center font-bold leading-[26px] sm:leading-[31.2px] mb-6 sm:mb-10 sm:h-[31px];
           }
 
           table {
             @apply w-full;
             th {
-              @apply text-[12px] sm:text-[16px] text-white leading-[16.8px] leading-[22.4px] bg-[#333D4B] border-[1px] border-solid border-black py-2 sm:py-2.5;
+              @apply text-[12px] sm:text-[16px] text-white leading-[17px] sm:leading-[22.4px] bg-[#333D4B] border-[1px] border-solid border-black py-[7px] sm:py-[9px];
             }
             td {
-              @apply text-[12px] sm:text-[16px] leading-[15.12px] leading-[22.4px] bg-white  border-[1px] border-solid border-black  py-[5px] sm:py-[9.25px] px-2 sm:px-3 pl-[13px] sm:pl-[13px] tracking-[-0.3px];
+              @apply text-[12px] sm:text-[16px] leading-[15px] sm:leading-[22.4px] bg-white  border-[1px] border-solid border-black  py-[5px] sm:py-[9.25px] px-2 sm:px-3 sm:pl-[13px];
 
               &:last-child {
-                @apply text-center text-[#E55353];
+                @apply text-center text-[#E55353] px-0;
 
                 span {
                   @apply font-bold;
@@ -127,7 +131,7 @@
           }
 
           dl {
-            @apply text-[16px] sm:text-[20px] leading-[20.8px] sm:leading-[26px] bg-white rounded-[20px] py-4 pl-[21px] pr-5;
+            @apply text-[16px] sm:text-[20px] leading-[21px] sm:leading-[26px] bg-white rounded-[20px] py-3 px-4 sm:py-4 sm:pl-[21px] sm:pr-5;
 
             dt {
               @apply font-bold mb-2;
@@ -139,7 +143,7 @@
 
                   &::before {
                     content: "";
-                    @apply block w-[4px] h-[4px] rounded-[50%] bg-black mt-2 flex-shrink-0;
+                    @apply block w-[4px] h-[4px] rounded-[50%] bg-black mt-2.5 sm:mt-2 flex-shrink-0;
                   }
                 }
               }
@@ -150,7 +154,7 @@
 
       &.section4 {
         div.icon-wrap {
-          @apply flex-1 text-center py-4 md:py-[48px];
+          @apply flex-1 text-center py-4 md:pt-[45px] md:pb-[48px];
 
           img {
             @apply mx-auto mb-4 md:mb-6;
@@ -158,10 +162,10 @@
 
           dl {
             dt {
-              @apply text-[16px] md:text-[24px] font-bold leading-[22.4px] md:leading-[31.2px] mb-1 md:mb-4;
+              @apply text-[16px] md:text-[24px] font-bold leading-[22.4px] md:leading-[31.2px] mb-1 md:mb-4 md:h-[31px];
             }
             dd {
-              @apply text-[16px] md:text-[20px] leading-[20.8px] md:leading-[30px];
+              @apply text-[16px] md:text-[20px] leading-[21px] md:leading-[30px];
             }
           }
         }
@@ -180,18 +184,18 @@
             &:before {
               counter-increment: type1;
               content: counter(type1);
-              @apply flex justify-center items-center w-[32px] h-[32px] text-[20px] text-[#6A5AD5] font-bold leading-[28px] bg-white rounded-[50%] md:absolute mx-auto mb-4 md:mb-auto;
+              @apply flex justify-center items-center w-[24px] md:w-[32px] h-[24px] md:h-[32px] text-[16px] md:text-[20px] text-[#6A5AD5] font-bold leading-[22px] md:leading-[28px] bg-white rounded-[50%] md:absolute mx-auto mb-4 md:mb-auto;
             }
 
             p {
-              @apply text-[16px] md:text-[24px] text-white text-center leading-[22.4px] md:leading-[31.2px] font-bold mb-4;
+              @apply text-[16px] md:text-[24px] text-white text-center leading-[22.4px] md:leading-[31.2px] font-bold mb-4 md:h-[62px];
             }
 
             ul {
               @apply flex flex-col;
 
               li {
-                @apply flex sm:justify-center items-center gap-1 text-white text-center leading-[25.6px];
+                @apply flex sm:justify-center items-center gap-1 text-white text-center leading-[21px] md:leading-[25.6px] sm:h-[26px];
 
                 &::before {
                   content: "";
@@ -208,17 +212,11 @@
           @apply flex flex-col sm:grid sm:grid-cols-3 gap-5;
 
           & > li {
-            @apply bg-[#F2F4F6] rounded-[20px] py-6 sm:py-10 px-4 sm:px-[21.5px];
+            @apply bg-[#F2F4F6] rounded-[20px] py-6 sm:py-10 px-4 sm:px-[20px];
 
             dl {
               dt {
-                @apply text-[16px] sm:text-[24px] font-bold leading-[22.4px] sm:leading-[31.2px] mb-4;
-              }
-              dt.mb6 {
-                @apply sm:mb-6;
-              }
-              dt.mb10 {
-                @apply sm:mb-10;
+                @apply text-[16px] sm:text-[24px] font-bold leading-[22px] sm:leading-[31px] mb-4 sm:mb-6;
               }
 
               dd {
