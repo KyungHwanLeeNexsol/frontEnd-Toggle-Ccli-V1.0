@@ -16,7 +16,7 @@ function MainPage() {
     window.scrollTo({
       top: sm
         ? (section4Ref.current?.offsetTop ?? 0) - 14
-        : (section4Ref.current?.offsetTop ?? 0) - 32,
+        : (section4Ref.current?.offsetTop ?? 0) - 20,
       behavior: "smooth",
     });
   };
@@ -42,7 +42,7 @@ function MainPage() {
               </Link>
               <Link
                 href=""
-                className="font-bold hidden lg:block leading-[22.4px] tracking-normal py-[5px]"
+                className="font-bold hidden lg:block leading-[22.4px] py-[5px]"
               >
                 회사소개
               </Link>
@@ -57,7 +57,7 @@ function MainPage() {
                   width={28}
                   height={28}
                 />
-                <p className="text-primary100 font-bold leading-[22.4px] tracking-[-0.3px]">
+                <p className="text-primary100 font-bold leading-[22px]">
                   중대재해보험에 대해 자세히 알아보세요
                 </p>
               </button>
@@ -78,7 +78,7 @@ function MainPage() {
                 width={20}
                 height={20}
               />
-              <p className="text-white text-[16px] font-bold leading-[22.4px] tracking-[-0.2px]">
+              <p className="text-white text-[16px] font-bold leading-[22.4px]">
                 우리 회사에 도입하기
               </p>
             </Link>
@@ -135,7 +135,7 @@ function MainPage() {
             </p>
             <button
               type="button"
-              className="text-primary font-bold leading-[22.4px] py-[15px] px-[27px] rounded-[16px] border-[2px] border-solid border-primary"
+              className="text-primary font-bold leading-[22px] py-[15px] px-[27px] rounded-[16px] border-[2px] border-solid border-primary"
               onClick={() => goToSection4()}
             >
               중대재해보험에 대해 자세히 알아보세요
