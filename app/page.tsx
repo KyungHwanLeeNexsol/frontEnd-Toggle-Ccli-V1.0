@@ -16,7 +16,7 @@ function MainPage() {
     window.scrollTo({
       top: sm
         ? (section4Ref.current?.offsetTop ?? 0) - 14
-        : (section4Ref.current?.offsetTop ?? 0) - 20,
+        : (section4Ref.current?.offsetTop ?? 0) - 36,
       behavior: "smooth",
     });
   };
